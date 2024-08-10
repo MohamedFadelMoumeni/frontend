@@ -20,7 +20,7 @@ const RootLayout = async ({children} : { children: React.ReactNode }) => {
           <h1 className='text-3xl font-semibold mb-3 lg:w-[70%]'>Leverage your existing social content on your website in minutes.
           </h1>
           <h4 className=' text-md font-regular lg:w-[85%]'>
-          You already have the content, it's time to get the most use out of it. Ghost lets you upload videos you've already created and tag products, converting them into Interactive Videos that you can use on your website.
+          You already have the content, it&apos;s time to get the most use out of it. Ghost lets you upload videos you&apos;ve already created and tag products, converting them into Interactive Videos that you can use on your website.
 
           </h4>
         </div>

@@ -43,13 +43,13 @@ const VideoWidget = () => {
     <div className='w-full flex flex-col gap-4'>
         <div className='space-y-2'>
             <h3 className='semibold-16 text-primary'>1. First add the Ghost script to your website header.</h3>
-            <p className='regular-13 text-gray-700'>You only do this once so ignore this step if you've already added it.
+            <p className='regular-13 text-gray-700'>You only do this once so ignore this step if you&apos;ve already added it.
             </p>
             <CodeBlock code={scriptAndCss} />
         </div>
         <div className='space-y-2'>
             <h3 className='semibold-16 text-primary'>2. Add your widget to the pages you want it to display on.</h3>
-            <p className='regular-13 text-gray-700'>You only do this once so ignore this step if you've already added it.
+            <p className='regular-13 text-gray-700'>You only do this once so ignore this step if you&apos;ve already added it.
             </p>
             <CodeBlock code={divTag}  />
         </div>

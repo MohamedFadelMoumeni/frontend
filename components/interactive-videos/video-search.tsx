@@ -32,7 +32,7 @@ const VideoSearch = () => {
       }
      }, 500)
      return ()=> clearTimeout(debounceFn)
-    }, [search])
+    }, [search, router, searchParams])
 
   return (
     <div className='flex items-center gap-2 w-full '>
