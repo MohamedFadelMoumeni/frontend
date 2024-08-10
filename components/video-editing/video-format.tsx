@@ -31,7 +31,7 @@ const VideoFormat = (props:Props) => {
             <div className='w-full p-2' onClick={() => setIsColorDisplay(!isColorDisplay)} style={{
               backgroundColor: `rgba(${props.colors.bgColor.r}, ${props.colors.bgColor.g}, ${props.colors.bgColor.b}, ${props.colors.bgColor.a})`
             }} />
-          <div className='absolute'>
+          <div className='absolute z-10'>
           {
               isColorDisplay &&    <SketchPicker color={props.colors.bgColor} onChange={(e) => setColors({...colors, bgColor : {r:e.rgb.r, g:e.rgb.g, b:e.rgb.b, a:e.rgb.a} })} />
 
