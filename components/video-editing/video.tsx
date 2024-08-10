@@ -43,8 +43,7 @@ const Video = (props : Props) => {
         {isMuted ? <IoVolumeMute size={20} className='text-white'/> : <IoVolumeHigh size={20} className='text-white' />}
       </div>
     }
-   <video onClick={handlePlayPause} onMouseLeave={() => setHover(false)} onMouseEnter={() => setHover(true)} ref={videoRef}  playsInline className='rounded-3xl h-full w-full object-cover absolute top-0 right-0 left-0 bottom-0'>
-     <source src={props.url} type='video/mp4' />
+   <video  src={props.url} onClick={handlePlayPause} onMouseLeave={() => setHover(false)} onMouseEnter={() => setHover(true)} ref={videoRef}  playsInline className='rounded-3xl h-full w-full object-cover absolute top-0 right-0 left-0 bottom-0'>
    </video>
    </>
   )

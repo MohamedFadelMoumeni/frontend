@@ -29,7 +29,7 @@ const VideoWidget = () => {
     <div className='w-full rounded-lg bg-primary-linear p-5 flex items-center justify-between'>
     <h2 className='w-[70%] semibold-xl !leading-[2rem] text-white'>Installation Code
     </h2>
-    <DialogTrigger>
+    <DialogTrigger asChild>
        <Button className='semibold-13 bg-white text-black px-4 rounded-full gap-2' variant='ghost'>
         Code
         <IoCodeSlash size={18} />
