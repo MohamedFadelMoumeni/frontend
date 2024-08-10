@@ -10,7 +10,7 @@ import { UserType } from '@/types'
 const DashboardPage = async  () => {
   const user : UserType = await getUserDetails()
   return (
-   <main className='w-full padding-x-container py-20'>
+   <main className='w-full padding-x-container py-10 md:py-20'>
    <h1 className='text-4xl font-bold'>Hi, {user.first_name}</h1>
    <div className='w-full my-8 bg-primary-linear p-4 md:p-8 text-white rounded-xl flex items-center justify-between flex-wrap gap-8 md:gap-0'>
     <h2 className='text-xl font-bold'>

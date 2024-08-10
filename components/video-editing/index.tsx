@@ -55,7 +55,7 @@ const VideoEdit = (props : Props) => {
     }, [video])
 
   return (
-    <main className="w-full padding-x-container py-20 ">
+    <main className="w-full padding-x-container py-10 md:py-20 ">
       <VideoCardHeader video={video} colors={colors} texts={texts} buttons={buttons} />
     <div className="w-full flex flex-wrap gap-6 mt-6 ">
       <div className="w-full lg:flex-1 gap-8 grid  md:grid-cols-2">
