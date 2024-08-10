@@ -38,15 +38,17 @@ export const update = async (path : string , body : object) => {
 
 }
 
-export const post = async (path : string , data: FormData | object) => {
+export const post = async (path : string , data: FormData | object, additionHeader: object = {} ) => {
     const isFormData = data instanceof FormData
     const body = isFormData ? data : JSON.stringify(data);
     const resp = await fetch(`${BACKEND_URL}${path}`, {
         method: "POST",
         body : body,
         headers: {
+            ...(additionHeader && {...additionHeader}),
            ...getHeaders(),
-           ...(!isFormData && { 'Content-Type': 'application/json' })
+           ...(!isFormData ? { 'Content-Type': 'application/json' } : {'Content-Type': 'multipart/form-data; boundary=--------------------------151840689896304164188529'
+})
 
         },
     })

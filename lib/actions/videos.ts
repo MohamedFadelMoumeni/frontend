@@ -5,6 +5,7 @@ import { revalidateTag } from "next/cache";
 import {get, post, remove, update} from '../fetch'
 
 export const uploadVideo = async (formData: FormData) => {
+  
    const resp = await post('/videos/upload', formData);
    console.log(resp)
   revalidateTag("videos")

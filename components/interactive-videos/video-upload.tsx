@@ -21,7 +21,6 @@ import {useDropzone} from 'react-dropzone'
 
 
 
-
 export function VideoUpload() {
 
   const {toast} = useToast()
@@ -54,6 +53,7 @@ export function VideoUpload() {
     setIsLoading(true)
     const form = new FormData()
     form.append("file", file)
+    console.log(form)
     uploadVideo(form)
     .then(() => {
        toast({
