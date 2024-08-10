@@ -5,11 +5,10 @@ import { getUserVideos } from '@/lib/actions/videos'
 import LoadingSkeleton from '@/components/ui/loading'
 import { SearchParamsProps } from '@/types'
 
-const VideoListingPage = async ({searchParams}: {searchParams: SearchParamsProps}) => {
-  console.log("This is the query :", searchParams.q)
+const VideoListingPage = async (props:SearchParamsProps) => {
   let criteria = {}
-  if(searchParams.q){
-    criteria = {title: searchParams.q}
+  if(props.searchParams.q){
+    criteria = {title: props.searchParams.q}
   }
   const response = await getUserVideos(criteria)
   return (
