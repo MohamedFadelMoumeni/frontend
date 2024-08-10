@@ -8,7 +8,7 @@ export const getUserDetails = async () => {
     const data = await get(API_ROUTES.USER_DETAILS, ["user"]);
     return data
 }
-export const updateUser = async(user : UserType) => {
+export const updateUser = async(user : Partial<UserType>) => {
     const data = await update(API_ROUTES.UPDATE_CURRENT_USER, user);
     return data
 }
