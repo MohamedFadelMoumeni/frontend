@@ -9,12 +9,13 @@ type Props = {
     colors : ColorType;
     setColors : React.Dispatch<React.SetStateAction<ColorType>>;
     texts : {title: string, subtitle: string},
+    url : string
 }
 const VideoPreview = (props : Props) => {
   return (
     <div className='flex-1 h-full relative'>
         <div className='w-[300px] h-full'>
-        <Video texts={props.texts}  />
+        <Video  url={props.url}  />
         </div>
         <div className='absolute bottom-0 right-0 left-0 py-6 px-4 space-y-3'>
           <div className='w-full flex flex-col gap-1 text-white prevent-text'>

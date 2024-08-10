@@ -5,7 +5,7 @@ import { IoVolumeMute , IoVolumeHigh} from "react-icons/io5";
 
 
 type Props = {
-  texts : {title: string, subtitle: string},
+  url: string
 }
 
 const Video = (props : Props) => {
@@ -44,7 +44,7 @@ const Video = (props : Props) => {
       </div>
     }
    <video onClick={handlePlayPause} onMouseLeave={() => setHover(false)} onMouseEnter={() => setHover(true)} ref={videoRef}  playsInline className='rounded-3xl h-full w-full object-cover absolute top-0 right-0 left-0 bottom-0'>
-     <source src='https://res.cloudinary.com/wxd/video/upload/v1721128759/umhi8brdfhc1dkdymq3k.mp4' type='video/mp4' />
+     <source src={props.url} type='video/mp4' />
    </video>
    </>
   )

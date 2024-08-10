@@ -65,7 +65,7 @@ const VideoEdit = (props : Props) => {
       <VideoSnippet />
       </div>
       <div className='relative h-[550px] mx-auto '>
-      <VideoPreview texts={texts} colors={colors} setColors={setColors} buttons={buttons} />
+      <VideoPreview url={video.url} texts={texts} colors={colors} setColors={setColors} buttons={buttons} />
       </div>
     </div>
       
