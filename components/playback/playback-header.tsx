@@ -6,7 +6,6 @@ import {
     SelectTrigger,
     SelectValue,
   } from "@/components/ui/select"
-import { PlaybackCreate } from './playback-create'
 
 const PlaybackHeader = () => {
   return (
@@ -35,7 +34,7 @@ const PlaybackHeader = () => {
   </SelectContent>
 </Select>
         </div>
-        <PlaybackCreate />
+
         </div>
     </div>
   )
