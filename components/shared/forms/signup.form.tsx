@@ -119,7 +119,9 @@ export function SignUpForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">Submit</Button>
+        <Button type="submit" className="w-full">
+          {isLoading? "Loading..." : "Sign up"}
+        </Button>
       </form>
     </Form>
   )
