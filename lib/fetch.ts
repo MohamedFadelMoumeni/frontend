@@ -47,11 +47,11 @@ export const post = async (path : string , data: FormData | object, additionHead
         headers: {
             ...(additionHeader && {...additionHeader}),
            ...getHeaders(),
-           ...(!isFormData ? { 'Content-Type': 'application/json' } : {'Content-Type': 'multipart/form-data; boundary=--------------------------151840689896304164188529'
-})
+           ...(!isFormData && { 'Content-Type': 'application/json' })
 
         },
     })
+    console.log(resp)
     if(!resp.ok) return false
     const response = await resp.json()
     console.log(response)

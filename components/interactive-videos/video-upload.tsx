@@ -55,11 +55,18 @@ export function VideoUpload() {
     form.append("file", file)
     console.log(form)
     uploadVideo(form)
-    .then(() => {
-       toast({
-         title: "Video uploaded successfully",
-         className : "top-0 right-0 flex fixed md:max-w-[420px] md:top-4 md:right-4 bg-green-600 text-white text-lg"
-       })
+    .then((resp) => {
+       if(resp){
+        toast({
+          title: "Video uploaded successfully",
+          className : "top-0 right-0 flex fixed md:max-w-[420px] md:top-4 md:right-4 bg-green-600 text-white text-lg"
+        })
+       }else {
+        toast({
+          title: "Failed to upload video",
+          className : "top-0 right-0 flex fixed md:max-w-[420px] md:top-4 md:right-4 bg-red-600 text-white text-lg"
+        })
+       }
      })
     .catch((error) => {
        toast({
